@@ -1,0 +1,17 @@
+{
+  "name": "js-server",
+  "version": "1.0.0",
+  "description": "Arduino Node JS Server for Controller",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Freddy",
+  "license": "MIT",
+  "dependencies": {
+    "async-json-parse": "^1.0.3",
+    "serialport": "^9.0.7",
+    "ws": "^7.4.5"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "arduino-controller",
+  "version": "1.0.0",
+  "description": "Arduino controller through a React User Interface, generate PWM, toggle the digital PINs of an Arduino ONE",
+  "main": "settings.js",
+  "scripts": 
+  {
+    "install_server": "(cd node-js-server && npm install)",
+    "server_symlinks": "(cd node-js-server/node_modules && ln ../../projectConfig.js projectConfig.js)",
+    "setup_server": "run-s install_server server_symlinks",
+    "install_client": "(cd react-client && npm install)",
+    "client_symlinks": "(cd react-client/node_modules && ln ../../projectConfig.js projectConfig.js)",
+    "setup_client": "run-s install_client client_symlinks",
+    "setup": "run-p setup_server setup_client",
+    "run_server": "npm start --prefix ./node-js-server",
+    "run_client": "npm start --prefix ./react-client",
+    "start": "run-p run_server run_client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreddyB1/Arduino-React-Controller.git"
+  },
+  "keywords": [
+    "Arduino",
+    "Controller",
+    "React",
+    "JavaScript",
+    "Node.js"
+  ],
+  "author": "Freddy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreddyB1/Arduino-React-Controller/issues"
+  },
+  "homepage": "https://github.com/FreddyB1/Arduino-React-Controller#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
